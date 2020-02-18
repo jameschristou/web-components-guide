@@ -10,6 +10,10 @@ components. As always, start with the basics:
 with web components
 * Some excellent documentation from the peeps at Google including best practices and browser issues to be aware of https://developers.google.com/web/fundamentals/web-components
 * https://javascript.info/custom-elements This is quite a good walk through of the lifecycle of Custom Elements.
+* https://dev.to/richharris/why-i-don-t-use-web-components-2cia Web components definitely are not perfect. This article highlights some of the problems.
+
+## Lifecycle
+Custom elements have their own lifecycle hooks. It's important to understand how these work https://ultimatecourses.com/blog/lifecycle-hooks-in-web-components
 
 ## SEO Considerations
 Now that the Googlebot uses an evergreen version of Chromium it has built in support to deal with all the technologies used as part
@@ -26,12 +30,14 @@ web component and there are complications around event handling. Dan Abramov has
 of React but in the mean time read [here](https://reactjs.org/docs/web-components.html) for suggested approaches.
 
 ## Styling Options
-https://blog.webf.zone/on-styling-web-components-b74b8c70c492 and https://javascript.info/shadow-dom-style are pretty good guides on what
-you're available options are.
+https://blog.webf.zone/on-styling-web-components-b74b8c70c492, https://javascript.info/shadow-dom-style and 
+https://developers.google.com/web/fundamentals/web-components/shadowdom are pretty good guides on what your available options are. 
+It's only when using shadow DOM that your options are limited due to the encapsulated nature of the shadow DOM.
 
 ### Theming Web Components with Custom CSS Properties
 If you only have colour changes from one theme to another then using Custom CSS Properties is a good option. You define your colours using
 Custom CSS Properties on the parent page and these are then accessible from within your Custom Element and within the shadow DOM. See this
+general guide on how to use them https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties.
 
 
 ### Using SASS with Web Components
